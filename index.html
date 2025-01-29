@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion des Revenus et Épargnes</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="header">
+          <svg class="piggy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z"/>
+            <path d="M2 9v1c0 1.1.9 2 2 2h1"/>
+            <path d="M16 11h0"/>
+          </svg>
+          <h1>Gestion des Revenus et Épargnes sur 7 Mois</h1>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Jour</th>
+                <th>Montant (DH)</th>
+                <th>Épargné</th>
+              </tr>
+            </thead>
+            <tbody id="savings-table"></tbody>
+          </table>
+        </div>
+
+        <div class="summary">
+          <div class="summary-card indigo">
+            <div class="summary-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z"/>
+              </svg>
+              <h3>Total Épargné</h3>
+            </div>
+            <p class="amount" id="total-saved">0 DH</p>
+            <p class="subtitle" id="days-count">0 jours d'épargne</p>
+          </div>
+
+          <div class="summary-card emerald">
+            <div class="summary-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+              <h3>Revenus Totaux</h3>
+            </div>
+            <p class="amount" id="total-revenue">0 DH</p>
+            <p class="subtitle" id="months-count">Sur 7 mois</p>
+          </div>
+
+          <div class="summary-card amber">
+            <div class="summary-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"/>
+                <path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/>
+                <path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"/>
+              </svg>
+              <h3>Reste Après Épargne</h3>
+            </div>
+            <p class="amount" id="remaining">0 DH</p>
+            <p class="subtitle">Budget disponible</p>
+          </div>
+        </div>
+
+        <button id="calculate" class="calculate-btn">
+          Calculer les Totaux
+        </button>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
